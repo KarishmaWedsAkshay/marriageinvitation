@@ -1,6 +1,6 @@
 {
-  "short_name": "Karishma&Akshayp",
-  "name": "Karishma&Akshayp",
+  "short_name": "Karishma&Akshay",
+  "name": "Karishma&Akshay",
   "theme_color": "#4A90E2",
   "background_color": "#F7F8F9",
   "display": "standalone",
@@ -24,6 +24,11 @@
       "src": "images/256.png",
       "type": "image/png",
       "sizes": "256x256"
+    },
+    {
+      "src": "images/512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": "/marriageinvitation/index.html"
