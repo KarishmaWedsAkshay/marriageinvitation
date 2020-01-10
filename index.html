@@ -25,8 +25,7 @@
     <meta name="twitter:url" content="" />
     <meta name="twitter:card" content="" />
     <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
-    <link rel="manifest" href="manifest.webmanifest" crossorigin="use-credentials">   
+    <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">    
     <!-- Animate.css -->
     <link rel="stylesheet" href="css/animate.css">
     <!-- Icomoon Icon Fonts-->
@@ -46,6 +45,19 @@
     <!--[if lt IE 9]>
     <script src="js/respond.min.js"></script>
     <![endif]-->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <script type="text/javascript">
+
+        if ('serviceWorker' in navigator) {
+            console.log("Will the service worker register?");
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function (reg) {
+                    console.log("Yes, it did.");
+                }).catch(function (err) {
+                    console.log("No it didn't. This happened:", err)
+                });
+        }
+    </script>
 </head>
 <body>
 
@@ -440,16 +452,7 @@
             month: d.getMonth() + 1,
             day: d.getDate(),
             enableUtc: false
-        });
-        if ('serviceWorker' in navigator) {
-            console.log("Will the service worker register?");
-            navigator.serviceWorker.register('service-worker.js')
-                .then(function (reg) {
-                    console.log("Yes, it did.");
-                }).catch(function (err) {
-                    console.log("No it didn't. This happened:", err)
-                });
-        }
+        });       
     </script>
 </body>
 </html>
