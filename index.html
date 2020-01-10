@@ -50,7 +50,7 @@
 
         if ('serviceWorker' in navigator) {
             console.log("Will the service worker register?");
-            navigator.serviceWorker.register('daSW.js')
+            navigator.serviceWorker.register('serviceworker.js')
                 .then(function (reg) {
                     console.log("Yes, it did.");
                 }).catch(function (err) {
